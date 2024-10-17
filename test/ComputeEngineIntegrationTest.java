@@ -28,7 +28,7 @@ public class ComputeEngineIntegrationTest {
     @BeforeEach
     public void setUp() {
  
-        computeE = new ComputeEnginePrototypeSmoke(); 
+        computeE = new ComputeEnginePrototypeSmoke(); //todo clean it up 
 
         dataStore = new InMemoryDataStore(inputConfig,outputConfig);
 
