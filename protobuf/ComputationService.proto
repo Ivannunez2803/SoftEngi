@@ -1,0 +1,46 @@
+syntax = "proto3";
+package api2;
+option java_outer_classname = "ComputationServiceOuterClass";
+
+service ComputationService{
+    rpc Compute (ComputeRequest) returns (ComputeResponse);
+    rpc ReadData (ReadRequest) returns (ReadResponse);
+    rpc AppendResult (AppendRequest) returns (AppendResponse);
+}
+
+message ComputeRequest {
+    optional input obj = 1;
+    optional output obj2 = 2;
+    optional bool include_warranty = 3;
+}
+message input{
+    repeated int32 list = 1; 
+}
+message output{
+    optional string out = 1; 
+}
+
+message ComputeResponse {
+    optional string result = 1;
+    optional string error_message = 2;
+
+}
+
+message ReadRequest{}
+
+message ReadResponse {
+    optional string data = 1;
+}
+
+message AppendRequest {
+    optional string result = 1;
+}
+
+message AppendResponse {
+    optional bool success = 1;
+}
+
+enum ComputeResult {
+    SUCCESS = 0;
+    FAILURE = 1;
+}

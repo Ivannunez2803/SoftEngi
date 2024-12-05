@@ -41,8 +41,8 @@ public class ComputeEngineIntegrationTest {
 
     @Test
     public void testComputeEngineIntegration() {
-    
-        dataStore.process();
+        computationCoordinator.setUp();
+        computationCoordinator.testPrototype();
 
         String[] expectedResults = {"1", "10", "25"};
         

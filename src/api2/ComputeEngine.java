@@ -20,4 +20,5 @@ import java.util.List;
  */
 public interface ComputeEngine {
 	String compute(List<Integer> value);
+	String computeNaive(List<Integer> input);
 }

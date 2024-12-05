@@ -2,6 +2,7 @@
 import api2.ComputationCoordinator;
 import api2.ComputationCoordinatorEmpty;
 import api2.ComputeEngine;
+import api2.ComputeEngineEmpty;
 import api2.ComputeRequest;
 import api2.ComputeResult;
 import api2.DataStore;
@@ -12,7 +13,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 //junit
 import static org.junit.Assert.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
 public class ComputationCoordinatorPrototypeSmoke{
@@ -20,8 +21,14 @@ public class ComputationCoordinatorPrototypeSmoke{
     // var setup 
     private ComputationCoordinatorEmpty coordinatorPrototype;
     private ComputationCoordinator mockedApi;
+
+    private DataStorePrototypeSmoke mockds;
+
+    private ComputeEnginePrototypeSmoke mockengine;
+
     private input mockedInputConfig;
     private output mockedOutputConfig;
+
     private ComputeRequest mockedRequest;
     private ComputeResult mockedResult;
 

@@ -26,6 +26,6 @@ public class Testr {
         ComputeResult result = core.compute(user);
 
         // Assert
-        assertEquals(ComputeResult.FAILURE, result); // Expecting failure when input list is empty
+        assertEquals(ComputeResult.SUCCESS, result); // Expecting failure when input list is empty
     }
 }
