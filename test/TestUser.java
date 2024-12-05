@@ -9,6 +9,7 @@ import api2.ComputationCoordinatorEmpty;
 import api2.ComputeResult;
 import api2.ComputeRequest;
 import api2.input;
+import api2.output;
 
 
 public class TestUser {
@@ -32,7 +33,7 @@ public class TestUser {
 		input inputConfig = new input(inputData);
 		// Create the ComputeRequest with the input
 
-		ComputeRequest computeRequest = new ComputeRequest(inputConfig, null);
+		ComputeRequest computeRequest = new ComputeRequest(inputConfig, new output(outputPath));
 
 		// Call the compute method
 		ComputeResult result = coordinator.compute(computeRequest);

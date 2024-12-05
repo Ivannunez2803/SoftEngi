@@ -15,7 +15,7 @@ public class DataStoreEmpty implements DataStore{
 
     private input Received;
     private output send;
-    private File myObj = new File("filedata.txt");
+    private File myObj;
 
     public DataStoreEmpty (input Received){
         this.Received = Received;
@@ -40,6 +40,7 @@ public class DataStoreEmpty implements DataStore{
     }
     @Override
     public WriteResult appendSingleResult(output output, String result) {
+        myObj = new File(output.getOutput());
         try (PrintWriter objw = new PrintWriter(new FileWriter(myObj, true))) {
             objw.println(result +"results");
             return new WriteResultImpl(WriteResultStatus.SUCCESS);

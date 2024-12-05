@@ -2,21 +2,17 @@ package api2;
 import java.util.List;
 
 public class output implements OutputConfig{
-    private List<Integer> outputL;
+    private String outputL;
 
-    public output(List<Integer> outputList) {
+    public output(String outputList) {
         this.outputL = outputList;
     }
 
-    public List<Integer> getOutputList() {
+    public String getOutput() {
         return outputL;
     }
 
-    public void setOutputList(List<Integer> outputList) {
+    public void setOutput(String outputList) {
         this.outputL = outputList;
-    }
-
-    public void addItem(Integer  item) {
-        this.outputL.add(item);
     }
 }
